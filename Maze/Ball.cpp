@@ -4,7 +4,8 @@
 // DO NOT USE
 Ball::Ball()
 {
-	//---TODO: error code---
+	std::cout << std::endl << "Error: Don't use this constructor for Ball.";
+	exit(2);
 }
 
 // The constructor to be used. Sets the values for all the data members
@@ -79,4 +80,16 @@ void Ball::winBound(float winX, float winY)
 void Ball::draw(RenderWindow &window)
 {
 	window.draw(ball);
+}
+
+// Update the bouding box
+void Ball::boundUpdate()
+{
+	ball_bound = ball.getGlobalBounds();
+}
+
+// Makes the ball move X units along x-direction and Y units along y-direction
+void Ball::move(float x, float y)
+{
+	ball.move(x,y);
 }

@@ -1,6 +1,10 @@
 #include<SFML/Graphics.hpp>
 #include<iostream>
+#include<stdlib.h>
+
 #include"Ball.h"
+#include"Box.h"
+
 using namespace sf;
 using namespace std;
 
@@ -16,11 +20,15 @@ int main()
 	Font font;
 	if (!font.loadFromFile("GrandHotel-Regular.otf"))
 	{
-		//---TODO: error code---		
+		cout << endl << "Error in Loading Font";
+		exit(1);
 	}
 
 	// Creating player character (ball)
-	Ball ball(25.f,Color::Red,0.5f,200.f,500.f);	
+	Ball ball(25.f,Color::Red,0.5f,200.f,500.f);
+
+	//
+	Box box(20.f,20.f,Color::Blue,800.f,200.f);
 
 	// Game loop
 	while (window.isOpen())
@@ -42,6 +50,12 @@ int main()
 				window.close();
 		}
 
+		// Update bounding boxes
+		ball.boundUpdate();
+		box.boundUpdate();
+
+		// Handling Collision
+		box.isColliding(ball);
 
 
 		// Clear/Draw/Display Sequence
@@ -49,7 +63,7 @@ int main()
 
 		//<-Drawing code->
 		ball.draw(window);
-		
+		box.draw(window);
 
 		window.display();
 
