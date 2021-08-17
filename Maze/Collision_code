@@ -1,0 +1,29 @@
+// Getting bounding box for the ball and the wall
+		//FloatRect ball_bound = ball.getGlobalBounds();
+		//FloatRect wall_bound = wall.getGlobalBounds();
+
+
+		// Implementing collision between ball and wall. This is done by checking collision
+		// and the direction of ball movement. When a collision happens, velocity
+		// is applied in the opposite direction of the movement that caused the collision.		
+		/*
+		if (ball_bound.intersects(wall_bound) && Keyboard::isKeyPressed(Keyboard::Down))
+		{
+			ball.move(0.f,-velocity);
+		}
+
+		if (ball_bound.intersects(wall_bound) && Keyboard::isKeyPressed(Keyboard::Up))
+		{
+			ball.move(0.f, velocity);
+		}
+
+		if (ball_bound.intersects(wall_bound) && Keyboard::isKeyPressed(Keyboard::Left))
+		{
+			ball.move(velocity,0.f);
+		}
+
+		if (ball_bound.intersects(wall_bound) && Keyboard::isKeyPressed(Keyboard::Right))
+		{
+			ball.move(-velocity,0.f);
+		}
+		*/
