@@ -159,6 +159,9 @@
   <ItemGroup>
     <Text Include="Collision_code" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Final_data.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
